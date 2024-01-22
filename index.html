@@ -1,138 +1,183 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Главная</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Главная</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/swiper.min.css">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-  <div class="wrapper">
-    <section class="fullscreen">
-      <header class="header">
-        <div class="header-inner">
-          <a href="/" class="logo"><img src="img/icons/logo.svg" alt="logo"></a>
-          <div class="burger">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
+  <body>
+    <div class="wrapper">
+      <section class="fullscreen">
+        <header class="header">
+          <div class="header-inner">
+            <a href="/" class="logo"
+              ><img src="img/icons/logo.svg" alt="logo"
+            /></a>
+            <div class="burger">
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+            </div>
+          </div>
+        </header>
+        <div class="fullscreen-slider swiper-container">
+          <div class="fullscreen-slider-wrapper swiper-wrapper">
+            <div class="fullscreen-slide swiper-slide">
+              <img
+                src="img/main/1.jpg"
+                alt="project-photo"
+                class="fullscreen-image"
+              />
+              <div class="fullscreen-content">
+                <h2 class="main-title">современная <span>архитектура</span></h2>
+                <a href="#" class="project-link">
+                  <span class="project-title">Paradize house</span>
+                  <span class="more-details">Подробнее</span>
+                </a>
+              </div>
+            </div>
+            <div class="fullscreen-slide swiper-slide">
+              <img
+                src="img/main/2.jpg"
+                alt="project-photo"
+                class="fullscreen-image"
+              />
+              <div class="fullscreen-content">
+                <h2 class="main-title">
+                  современный <span>дизайн интерьеров</span>
+                </h2>
+                <a href="#" class="project-link">
+                  <span class="project-title">Paradize house</span>
+                  <span class="more-details">Подробнее</span>
+                </a>
+              </div>
+            </div>
+            <div class="fullscreen-slide swiper-slide">
+              <img
+                src="img/main/3.jpg"
+                alt="project-photo"
+                class="fullscreen-image"
+              />
+              <div class="fullscreen-content">
+                <h2 class="main-title">современная <span>архитектура</span></h2>
+                <a href="#" class="project-link">
+                  <span class="project-title">Paradize house</span>
+                  <span class="more-details">Подробнее</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-      </header>
-      <div class="fullscreen-slider swiper-container">
-        <div class="fullscreen-slider-wrapper swiper-wrapper">
-          <div class="fullscreen-slide swiper-slide">
-            <img src="img/main/1.jpg" alt="project-photo" class="fullscreen-image">
-            <div class="fullscreen-content">
-              <h2 class="main-title">современная <span>архитектура</span>
-              </h2>
-              <a href="#" class="project-link">
-                <span class="project-title">Paradize house</span>
-                <span class="more-details">Подробнее</span>
-              </a>
+        <a href="#" class="callback-button"
+          ><svg
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19.5176 8.04756C19.5173 7.96541 19.5333 7.88403 19.5647 7.80809C19.596 7.73215 19.642 7.66315 19.7001 7.60506C19.7582 7.54698 19.8272 7.50095 19.9031 7.46963C19.9791 7.43831 20.0604 7.42231 20.1426 7.42256C26.8301 7.27881 32.7176 13.1726 32.5801 19.8538C32.5801 20.0196 32.5142 20.1785 32.397 20.2957C32.2798 20.413 32.1209 20.4788 31.9551 20.4788C31.7893 20.4788 31.6304 20.413 31.5132 20.2957C31.3959 20.1785 31.3301 20.0196 31.3301 19.8538C31.4551 13.8401 26.1551 8.54756 20.1426 8.67256C19.977 8.67206 19.8183 8.60606 19.7012 8.48895C19.5841 8.37185 19.5181 8.21317 19.5176 8.04756ZM36.8488 33.8476C36.1303 34.9209 35.1692 35.8101 34.0432 36.4431C32.9172 37.0762 31.6581 37.4352 30.3676 37.4913C27.9632 37.5957 25.5782 36.4994 23.4676 35.5226C19.2473 33.6952 15.4222 31.0652 12.2051 27.7788C8.964 24.6031 6.35903 20.8378 4.53009 16.6851C1.41134 10.7663 1.95509 5.97256 6.08009 3.22256C7.77384 1.99756 9.84884 2.35381 11.3551 4.14131C12.9909 6.0372 14.5103 8.03043 15.9051 10.1101C16.7801 12.0601 15.3926 13.4288 14.2801 14.5288C12.8676 15.9226 12.1863 16.7226 13.3676 18.1913C15.7862 21.55 18.7501 24.4801 22.1363 26.8601C23.7301 28.0876 25.1963 25.8319 26.5676 24.7038C26.9892 24.2381 27.5565 23.9295 28.1765 23.8284C28.7965 23.7273 29.4324 23.8399 29.9801 24.1476C32.342 25.8457 35.1782 27.6369 36.9113 29.8726C37.2852 30.4706 37.4783 31.164 37.4672 31.8693C37.4561 32.5745 37.2414 33.2615 36.8488 33.8476Z"
+            />
+            <path
+              d="M19.5176 3.32256C19.5178 3.24003 19.5344 3.15836 19.5663 3.08223C19.5981 3.00611 19.6447 2.93703 19.7034 2.87896C19.762 2.82089 19.8316 2.77497 19.908 2.74384C19.9845 2.71271 20.0663 2.69699 20.1488 2.69756C29.3676 2.50506 37.4932 10.6369 37.3051 19.8538C37.3051 20.0196 37.2392 20.1785 37.122 20.2958C37.0048 20.413 36.8458 20.4788 36.6801 20.4788C36.5143 20.4788 36.3553 20.413 36.2381 20.2958C36.1209 20.1785 36.0551 20.0196 36.0551 19.8538C36.2332 11.3063 28.6932 3.76756 20.1488 3.94756C20.0663 3.94814 19.9845 3.93241 19.908 3.90129C19.8316 3.87016 19.762 3.82424 19.7034 3.76617C19.6447 3.7081 19.5981 3.63902 19.5663 3.5629C19.5344 3.48677 19.5178 3.4051 19.5176 3.32256ZM19.5176 12.7663C19.5181 12.6007 19.5841 12.442 19.7012 12.3249C19.8183 12.2078 19.977 12.1418 20.1426 12.1413C22.187 12.1446 24.1468 12.9582 25.5925 14.4039C27.0381 15.8496 27.8518 17.8093 27.8551 19.8538C27.8551 20.0196 27.7892 20.1785 27.672 20.2958C27.5548 20.413 27.3958 20.4788 27.2301 20.4788C27.0643 20.4788 26.9053 20.413 26.7881 20.2958C26.6709 20.1785 26.6051 20.0196 26.6051 19.8538C26.6028 18.1406 25.9212 16.4981 24.7097 15.2867C23.4982 14.0752 21.8558 13.3936 20.1426 13.3913C20.0604 13.3916 19.9791 13.3756 19.9031 13.3442C19.8272 13.3129 19.7582 13.2669 19.7001 13.2088C19.642 13.1507 19.596 13.0817 19.5647 13.0058C19.5333 12.9298 19.5173 12.8485 19.5176 12.7663Z"
+            /></svg
+        ></a>
+        <div class="fullscreen-pagination swiper-pagination"></div>
+      </section>
+      <section class="about">
+        <div class="container">
+          <div class="about-row">
+            <div class="about-column">
+              <h3 class="title about-title">
+                Архитектурное бюро <br />RM ARCHITECTS
+              </h3>
+              <p class="text about-text">
+                профессиональная команда архитекторов и инженеров
+              </p>
             </div>
-          </div>
-          <div class="fullscreen-slide swiper-slide">
-            <img src="img/main/2.jpg" alt="project-photo" class="fullscreen-image">
-            <div class="fullscreen-content">
-              <h2 class="main-title">современный <span>дизайн интерьеров</span>
-              </h2>
-              <a href="#" class="project-link">
-                <span class="project-title">Paradize house</span>
-                <span class="more-details">Подробнее</span>
-              </a>
-            </div>
-          </div>
-          <div class="fullscreen-slide swiper-slide">
-            <img src="img/main/3.jpg" alt="project-photo" class="fullscreen-image">
-            <div class="fullscreen-content">
-              <h2 class="main-title">современная <span>архитектура</span>
-              </h2>
-              <a href="#" class="project-link">
-                <span class="project-title">Paradize house</span>
-                <span class="more-details">Подробнее</span>
-              </a>
+            <div class="about-column">
+              <p class="text about-text">
+                Наши проекты в первую очередь про эксклюзивность,
+                функциональность и удобство, где каждая деталь будет о вас и для
+                вас. Наша основная задача — чтобы дом стал выражением жизни
+                семьи, а не существующих канонов, правил или стереотипов.
+              </p>
+              <p class="text about-text">
+                Мы учитываем в работе ваше видение идеального пространства для
+                жизни, ваши желания и мечты. Поэтому каждый проект уникален, как
+                и характер и потребности его владельца.
+              </p>
+              <p class="text about-text">
+                Использование нами новейших решений, в частности BIM-технологии
+                проектирования, в разы улучшает работу и обеспечивает
+                максимальную точность, экономит ваше время и помогает создать по
+                настоящему превосходный дом или квартиру.
+              </p>
             </div>
           </div>
         </div>
-      </div>
-      <a href="#" class="callback-button"><img src="img/icons/phone_white.svg" alt="phone"></a>
-      <div class="fullscreen-pagination swiper-pagination"></div>
-    </section>
-    <section class="about">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, facere. Saepe nobis, laborum iste sapiente ipsam
-      libero praesentium porro ea enim omnis temporibus aut illum, repellendus architecto pariatur? Saepe tempore at
-      quas hic necessitatibus itaque repudiandae quos, eligendi laudantium! Id possimus cum ut provident consequuntur
-      quas beatae rem accusantium expedita perspiciatis placeat dignissimos consectetur, aspernatur minus quae voluptate
-      temporibus dolores veniam sunt facilis accusamus molestias eius incidunt. Totam quisquam inventore at atque,
-      commodi consectetur eveniet neque, nihil dolore tempora minima, quae blanditiis iure iste mollitia aperiam omnis!
-      Autem, praesentium illum quidem porro quod laudantium ipsa fugiat velit nam dignissimos deleniti ab animi incidunt
-      labore. Ratione, sed ipsam voluptate quia itaque earum quisquam laboriosam debitis quo, repellat asperiores harum
-      libero consectetur voluptatibus corporis, laborum minima assumenda tempore nesciunt dolore! Laudantium cumque
-      nostrum aperiam, sunt soluta tenetur excepturi. Ut quae cupiditate nostrum, eaque veniam delectus commodi ipsum
-      esse hic magni explicabo error, autem, sint facilis nihil ipsam nemo at reiciendis voluptatibus? Consequuntur
-      rerum quidem unde porro magni. Excepturi reprehenderit illo ullam cumque aliquid quasi, earum vel, incidunt quos
-      accusantium modi velit possimus ea quaerat unde asperiores, dicta explicabo enim eveniet minus suscipit fugit
-      error. Odit quasi commodi accusantium nostrum facere numquam praesentium quia recusandae architecto animi ut, iure
-      asperiores ad reprehenderit illo, placeat vitae mollitia nobis. Iste illum id adipisci veniam provident ut
-      voluptates recusandae, a atque magni sint dolor quia rerum delectus. Ex minima at architecto incidunt facere
-      animi? Nulla, neque odit odio aut eaque maiores itaque quos consectetur, debitis nemo fugit libero totam optio
-      veniam quibusdam distinctio. Blanditiis, doloribus consequatur fugit porro, non doloremque, quos assumenda error
-      accusantium nobis consectetur recusandae facere deleniti consequuntur corporis corrupti dolore eligendi mollitia
-      neque nulla laboriosam aspernatur illum beatae. Officiis unde assumenda mollitia, quasi, maxime a, minima ad
-      tenetur error autem aperiam laudantium corporis.
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio, reiciendis aliquam repellendus consequatur
-      praesentium pariatur voluptatem cumque, dolorum velit tempora quaerat amet nesciunt nihil officiis ducimus?
-      Expedita neque fugit odio architecto. Ea aperiam, fugiat obcaecati aspernatur provident culpa, et veritatis
-      assumenda suscipit corrupti animi magnam enim similique, vel pariatur quod minima atque cum id aliquam
-      consectetur! Obcaecati iure veniam ad neque praesentium nobis atque natus alias architecto accusantium omnis nemo
-      vitae maiores quia deserunt corrupti, esse dolorem iusto laborum nesciunt assumenda. Itaque earum culpa voluptas,
-      eos tempore unde quidem sed fuga numquam animi reiciendis cum expedita eveniet? Libero provident consectetur magni
-      dolorum. Nihil, aspernatur assumenda at maiores id vel doloribus sed similique sint expedita iusto reprehenderit
-      maxime laboriosam eum magni. Aperiam dolorum libero natus quam, repudiandae minima odit ab laboriosam praesentium,
-      optio minus nobis. Accusantium, rem reiciendis magnam, perspiciatis ratione eum quisquam corrupti ea inventore
-      praesentium eaque nisi ex ut, nesciunt tempora dolore laboriosam odit error facere iste officiis provident
-      accusamus vitae blanditiis! Quos tempora voluptates dolore sint maiores eligendi voluptatum laudantium labore.
-      Sunt quidem impedit quibusdam autem architecto nam explicabo iure? Maiores ipsam molestiae autem accusantium nemo
-      sit corporis voluptas nobis neque alias suscipit excepturi debitis, pariatur cumque, placeat eligendi fugit nulla
-      impedit ullam quasi eius exercitationem! Aperiam, provident? Reiciendis impedit error rem reprehenderit expedita
-      magnam nulla vitae eveniet eaque voluptas tempora, soluta libero, fugit dolorem illum, molestiae quos ad
-      recusandae nisi. Rem at dolore, et, eaque quae sunt dicta ipsum quas deleniti dolores nulla commodi veniam
-      consequatur. Officiis recusandae ullam eos alias, nihil cupiditate porro autem nesciunt labore, saepe sapiente
-      odio, minima nobis vel dicta dignissimos! Obcaecati officia aut qui maiores ipsum in voluptate nostrum tenetur
-      explicabo libero ad, fugit accusantium animi enim mollitia, doloribus unde porro incidunt excepturi vero, alias
-      suscipit. Provident suscipit error nisi labore iste aspernatur, amet nobis, quam eum officiis, nihil doloribus
-      ipsum veritatis! Repudiandae tempore eius fugit aut facilis voluptas itaque natus magnam voluptatem dignissimos
-      delectus, illo enim eum vitae fuga? Optio laborum eveniet saepe, temporibus molestiae nisi harum magnam expedita
-      voluptatibus fugit reiciendis necessitatibus unde culpa ab quisquam porro quam, aliquid esse quo labore iusto
-      dicta. Non sunt molestias asperiores fugiat. Consectetur, modi porro quas culpa at quod delectus eveniet iste iure
-      eum reprehenderit, consequuntur sed voluptate aut incidunt dicta, odit earum labore qui error veniam distinctio
-      minus. Sapiente, ullam. Rerum commodi illo odio voluptatem velit dolorum tempora officia pariatur recusandae
-      maiores. Inventore accusamus eum quaerat magni, tempore saepe illo eligendi incidunt quibusdam accusantium sequi
-      dignissimos nostrum ipsum consequuntur doloremque, molestiae, quidem sapiente? Quis quam quasi eligendi optio quod
-      sequi corrupti eius voluptas cumque ad qui fugit aperiam soluta ipsa ducimus vitae voluptatibus ex, possimus
-      voluptates! Rem voluptas ea quam magni esse pariatur dolores mollitia quasi error numquam minima, sit, sunt nobis
-      officia illo totam eum necessitatibus iure cumque ipsam tenetur deleniti saepe. Labore maiores aspernatur, debitis
-      optio, enim nesciunt laudantium, id explicabo necessitatibus autem eveniet nisi alias magni nam doloremque
-      provident? Aliquid, consequuntur magnam? Quae corporis, ipsam numquam recusandae exercitationem dignissimos!
-    </section>
-    <section class="architecture"></section>
-    <section class="design"></section>
-    <section class="advantages"></section>
-    <section class="results"></section>
-    <section class="work"></section>
-    <section class="price"></section>
-    <section class="feedback"></section>
-    <footer class="footer"></footer>
-  </div>
-  <script src="js/swiper.min.js"></script>
-  <script src="js/script.js"></script>
-</body>
-
+      </section>
+      <section class="architecture">
+        <h3 class="title">Архитектурные проекты</h3>
+        <p class="subtitle">Проектирование частных домов</p>
+        <div class="projects-photos">
+          <a href="#"
+            ><div class="project-photo-block">
+              <img src="img/main/1a.jpg" alt="project-photo" />
+              <div class="project-photo-hover">
+                <p class="project-photo-title">Название проекта</p>
+                <p class="text project-photo-text">Местоположение</p>
+              </div>
+            </div></a
+          >
+          <a href="#"
+            ><div class="project-photo-block">
+              <img src="img/main/2a.jpg" alt="project-photo" />
+              <div class="project-photo-hover">
+                <p class="project-photo-title">Название проекта</p>
+                <p class="text project-photo-text">Местоположение</p>
+              </div>
+            </div></a
+          >
+          <a href="#"
+            ><div class="project-photo-block">
+              <img src="img/main/3a.jpg" alt="project-photo" />
+              <div class="project-photo-hover">
+                <p class="project-photo-title">Название проекта</p>
+                <p class="text project-photo-text">Местоположение</p>
+              </div>
+            </div></a
+          >
+          <a href="#"
+            ><div class="project-photo-block">
+              <img src="img/main/4a.jpg" alt="project-photo" />
+              <div class="project-photo-hover">
+                <p class="project-photo-title">Название проекта</p>
+                <p class="text project-photo-text">Местоположение</p>
+              </div>
+            </div></a
+          >
+        </div>
+      </section>
+      <section class="design"></section>
+      <section class="advantages"></section>
+      <section class="results"></section>
+      <section class="work"></section>
+      <section class="price"></section>
+      <section class="feedback"></section>
+      <footer class="footer"></footer>
+    </div>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>

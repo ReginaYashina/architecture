@@ -93,6 +93,30 @@ h6 {
   min-height: 100vh;
 }
 
+.title {
+  font-size: 34px;
+  font-style: normal;
+  line-height: 135%; /* 45.9px */
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.subtitle {
+  color: #333;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 130%; /* 23.4px */
+  margin-top: 10px;
+}
+
+.text {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 23.4px */
+}
+
 .header {
   position: absolute;
   width: 100%;
@@ -131,7 +155,7 @@ h6 {
   transform: translateX(-50%);
   text-align: center;
   text-transform: uppercase;
-  color: #FFF;
+  color: #fff;
   font-size: 32px;
   font-weight: 400;
   line-height: 125%;
@@ -140,6 +164,84 @@ h6 {
   display: block;
   font-size: 52px;
   margin-top: 15px;
+}
+
+.callback-button {
+  position: absolute;
+  left: 100px;
+  bottom: 50px;
+  z-index: 2;
+}
+.callback-button svg {
+  fill: #fff;
+}
+
+.project-link {
+  position: absolute;
+  right: 100px;
+  bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.project-title {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 125%;
+  text-transform: uppercase;
+}
+
+.more-details {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 125%;
+  text-transform: uppercase;
+  position: relative;
+  padding-right: 15px;
+}
+.more-details:before {
+  content: url(../img/icons/arrow.png);
+  position: absolute;
+  left: 100%;
+}
+
+.container {
+  width: 1290px;
+  margin: 0 auto;
+}
+
+.about {
+  padding: 100px 0 50px;
+}
+
+.about-row {
+  display: flex;
+}
+
+.about-column {
+  flex: 0 1 50%;
+}
+
+.about-title {
+  color: #111;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.about-text {
+  color: #333;
+  margin-bottom: 12px;
+}
+.about-text:last-child {
+  margin-bottom: 0;
+}
+
+.architecture {
+  padding: 50px 0;
 }
 
 .burger {
@@ -176,6 +278,10 @@ h6 {
 .fullscreen-slider-wrapper,
 .fullscreen-slide {
   min-height: 100vh;
+}
+
+.fullscreen-slide {
+  position: relative;
 }
 
 .fullscreen-pagination {

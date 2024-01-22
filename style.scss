@@ -37,7 +37,7 @@ body {
 
 body {
   line-height: 1;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   //text-rendering: optimizeLegibility;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -47,8 +47,7 @@ body {
 input,
 button,
 textarea {
-  font-family: 'Montserrat',
-    sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 input::-ms-clear {
@@ -99,9 +98,28 @@ h6 {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-
 }
-
+.title {
+  font-size: 34px;
+  font-style: normal;
+  line-height: 135%; /* 45.9px */
+  text-transform: uppercase;
+  text-align: center;
+}
+.subtitle {
+  color: #333;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 130%; /* 23.4px */
+  margin-top: 10px;
+}
+.text {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 23.4px */
+}
 .header {
   position: absolute;
   width: 100%;
@@ -117,9 +135,11 @@ h6 {
   align-items: center;
 }
 
-.logo {}
+.logo {
+}
 
-.logo img {}
+.logo img {
+}
 
 .fullscreen {
   min-height: 100vh;
@@ -136,8 +156,8 @@ h6 {
   object-fit: cover;
 }
 
-
-.fullscreen-content {}
+.fullscreen-content {
+}
 
 .main-title {
   position: absolute;
@@ -146,7 +166,7 @@ h6 {
   transform: translateX(-50%);
   text-align: center;
   text-transform: uppercase;
-  color: #FFF;
+  color: #fff;
   font-size: 32px;
   font-weight: 400;
   line-height: 125%;
@@ -158,23 +178,107 @@ h6 {
   }
 }
 
-.about {}
+.callback-button {
+  position: absolute;
+  left: 100px;
+  bottom: 50px;
+  z-index: 2;
+  svg {
+    fill: #fff;
+  }
+}
 
-.architecture {}
+.project-link {
+  position: absolute;
+  right: 100px;
+  bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.project-title {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 125%;
+  text-transform: uppercase;
+}
+.more-details {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 125%;
+  text-transform: uppercase;
+  position: relative;
+  padding-right: 15px;
+  &:before {
+    content: url(../img/icons/arrow.png);
+    position: absolute;
+    left: 100%;
+  }
+}
+.container {
+  width: 1290px;
+  margin: 0 auto;
+}
+.about {
+  padding: 100px 0 50px;
+}
+.about-row {
+  display: flex;
+}
+.about-column {
+  flex: 0 1 50%;
+}
 
-.design {}
+.about-title {
+  color: #111;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-align: left;
+}
 
-.advantages {}
+.about-text {
+  color: #333;
+  margin-bottom: 12px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
 
-.results {}
+.architecture {
+  padding: 50px 0;
+}
+.projects-photos {
+}
+.project-photo-block {
+}
+.project-photo-hover {
+}
+.project-photo-title {
+}
+.project-photo-text {
+}
+.design {
+}
 
-.work {}
+.advantages {
+}
 
-.price {}
+.results {
+}
 
-.feedback {}
+.work {
+}
 
-.footer {}
+.price {
+}
+
+.feedback {
+}
+
+.footer {
+}
 
 // --------------------------------
 // burger
@@ -223,6 +327,9 @@ h6 {
 .fullscreen-slide {
   min-height: 100vh;
 }
+.fullscreen-slide {
+  position: relative;
+}
 
 .fullscreen-pagination {
   bottom: 50px;
@@ -233,7 +340,7 @@ h6 {
     width: 12px;
     height: 12px;
     margin: 0 15px;
-    background: rgb(100%, 100%, 100%, .4);
+    background: rgb(100%, 100%, 100%, 0.4);
     opacity: 1;
   }
 
