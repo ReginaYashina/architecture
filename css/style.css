@@ -345,6 +345,10 @@ h6 {
   -webkit-box-orient: vertical;
 }
 
+.design {
+  padding: 50px 0;
+}
+
 .burger {
   position: relative;
   z-index: 2;
