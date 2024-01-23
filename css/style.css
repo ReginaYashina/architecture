@@ -494,3 +494,10 @@ h6 {
 .fullscreen-pagination .swiper-pagination-bullet-active {
   background: rgb(255, 255, 255);
 }
+
+._tabs-block {
+  display: none;
+}
+._tabs-block._active {
+  display: block;
+}

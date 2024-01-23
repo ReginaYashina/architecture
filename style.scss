@@ -543,3 +543,12 @@ h6 {
     background: rgb(100%, 100%, 100%, 1);
   }
 }
+
+// tabs
+._tabs-block {
+  display: none;
+
+  &._active {
+    display: block;
+  }
+}
