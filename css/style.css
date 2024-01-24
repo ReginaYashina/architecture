@@ -399,7 +399,7 @@ h6 {
 
 .results {
   padding: 100px 0;
-  background: #2D2B2C;
+  background: #2d2b2c;
 }
 
 .results-title {
@@ -437,6 +437,133 @@ h6 {
   font-weight: 500;
   line-height: 130%;
   /* 20.8px */
+}
+
+.work {
+  padding: 100px 0;
+}
+
+.work-subtitle {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.work-tabs {
+  margin-top: 40px;
+}
+
+.work-tabs-header {
+  display: flex;
+  justify-content: center;
+}
+
+.work-tabs-item {
+  color: #cfcfcf;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 130%; /* 20.8px */
+  display: inline-flex;
+  padding: 15px 30px;
+  border: 2px solid #f3f3f3;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-right: 30px;
+  cursor: pointer;
+}
+.work-tabs-item:last-child {
+  margin-right: 0;
+}
+.work-tabs-item._active {
+  color: #111;
+  background: #f3f3f3;
+}
+
+.work-tabs-block {
+  margin-top: 40px;
+}
+
+.work-architecture-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.work-architecture-column {
+  flex: 0 1 31%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 15px 30px;
+}
+
+.work-architecture-number {
+  color: #afafaf;
+  text-align: center;
+  font-size: 70px;
+  font-weight: 600;
+  line-height: 100%; /* 70px */
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  border: 2px solid #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.work-architecture-text {
+  margin: 10px 0;
+  color: #111;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 130%; /* 20.8px */
+}
+
+.work-architecture-term {
+  color: #818181;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 130%; /* 19.5px */
+}
+
+.work-design-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.work-design-column {
+  flex: 0 1 31%;
+  margin: 0 15px 30px;
+  position: relative;
+  padding: 70px 0 0 40px;
+}
+
+.work-design-number {
+  max-width: 150px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.work-design-number svg {
+  width: 100%;
+}
+
+.work-design-text {
+  color: #111;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 130%; /* 20.8px */
+}
+
+.work-button {
+  left: 0;
+  transform: translateX(0);
+  margin-top: 18px;
 }
 
 .burger {
