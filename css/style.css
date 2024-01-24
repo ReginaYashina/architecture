@@ -819,6 +819,7 @@ h6 {
 }
 
 .main {
+  position: relative;
   padding: 200px 0 100px;
 }
 
@@ -853,4 +854,27 @@ h6 {
   left: 0;
   width: 30px;
   height: 30px;
+}
+
+.breadcrumbs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 11;
+}
+.breadcrumbs p,
+.breadcrumbs a {
+  color: #333;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 130%; /* 23.4px */
+}
+
+.divider {
+  padding: 0 5px;
 }
