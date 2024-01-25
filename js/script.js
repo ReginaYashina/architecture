@@ -63,6 +63,7 @@ if (
 
 cardsArrayVisible.forEach(function (item) {
   item.classList.add("visible");
+  item.classList.remove("none");
 });
 
 btnShowCards.addEventListener("click", sliceArrayCards);
@@ -77,6 +78,7 @@ function sliceArrayCards() {
 
   cardsArrayVisible.forEach(function (item) {
     item.classList.add("visible");
+    item.classList.remove("none");
   });
 
   const visibleCards = cards.querySelectorAll(".visible");
