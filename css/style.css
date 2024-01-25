@@ -337,9 +337,12 @@ h6 {
 }
 
 .project-photo-block {
-  display: block;
+  display: none;
   position: relative;
   flex: 1 1 49%;
+}
+.project-photo-block.visible {
+  display: block;
 }
 .project-photo-block:hover > .project-photo-hover {
   opacity: 1;
@@ -877,4 +880,8 @@ h6 {
 
 .divider {
   padding: 0 5px;
+}
+
+.none {
+  display: none;
 }
