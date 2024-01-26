@@ -896,3 +896,34 @@ h6 {
 .none {
   display: none;
 }
+
+.project-breadcrumbs a,
+.project-breadcrumbs p {
+  color: #fff;
+}
+
+.project-title {
+  color: #fff;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 135%; /* 67.5px */
+  text-transform: uppercase;
+  position: absolute;
+  z-index: 1;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.project-infoblock {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 50px;
+  display: flex;
+  color: #fff;
+  width: 1290px;
+  justify-content: space-between;
+}
