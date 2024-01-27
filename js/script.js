@@ -66,7 +66,10 @@ cardsArrayVisible.forEach(function (item) {
   item.classList.remove("none");
 });
 
-btnShowCards.addEventListener("click", sliceArrayCards);
+if (!!btnShowCards) {
+  btnShowCards.addEventListener("click", sliceArrayCards);
+}
+
 
 function sliceArrayCards() {
   if (shownCards >= cardsArray.length) return;
@@ -89,4 +92,25 @@ function sliceArrayCards() {
 }
 
 //gallery
-baguetteBox.run(".about-project-gallery");
+let gallery = document.querySelector('.about-project-gallery');
+if (!!gallery) {
+  baguetteBox.run(".about-project-gallery");
+}
+
+
+// calculator - page info
+let infoButtons = document.querySelectorAll('.calculator-info-btn');
+infoButtons.forEach(function (item) {
+
+  item.addEventListener('click', function () {
+    if (item.classList.contains("open")) {
+      item.classList.remove("open");
+      item.innerText = 'Развернуть';
+      item.closest('.calculator-info').querySelector('.calculator-info-block').classList.remove("open");
+    } else {
+      item.classList.add("open");
+      item.innerText = 'Свернуть';
+      item.closest('.calculator-info').querySelector('.calculator-info-block').classList.add("open");
+    }
+  })
+})
