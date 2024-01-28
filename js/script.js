@@ -36,8 +36,6 @@ if (!!fullscreen) {
 }
 
 
-
-
 // burger
 let burgers = document.querySelectorAll(".burger");
 burgers.forEach(function (burger) {
@@ -195,23 +193,26 @@ infoButtons.forEach(function (item) {
 // })
 
 // to top button
-// const goTopBtn = document.querySelector(".go-top");
-// window.addEventListener("scroll", trackScroll);
-// goTopBtn.addEventListener("click", goTop);
-// function trackScroll() {
-//   const scrolled = window.scrollY;
-//   const coords = document.documentElement.clientHeight;
-//   if (scrolled > coords) {
-//     goTopBtn.classList.add("show");
-//   } else {
-//     goTopBtn.classList.remove("show");
-//   }
-// }
+let body = document.body,
+  html = document.documentElement;
 
-// function goTop() {
-//   if (window.scrollY > 0) {
-//     window.scrollBy(0, -30); // второй аргумент - скорость
-//     setTimeout(goTop, 0); // входим в рекурсию
-//   }
-// }
+let pageHeight = Math.max(body.scrollHeight, body.offsetHeight,
+  html.clientHeight, html.scrollHeight, html.offsetHeight);
 
+console.log(pageHeight);
+
+let toTopButton = this.document.querySelector('.go-top');
+window.addEventListener('scroll', function () {
+  if (window.scrollY > 400) {
+    toTopButton.classList.add('show');
+  } else {
+    toTopButton.classList.remove('show');
+  }
+})
+
+toTopButton.addEventListener('click', function backToTop() {
+  if (window.scrollY > 0) {
+    window.scrollBy(0, -pageHeight + 500);
+    // setTimeout(backToTop, 10);
+  }
+})
