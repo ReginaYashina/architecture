@@ -17,10 +17,20 @@
 <body>
   <div class="wrapper">
     <section class="fullscreen">
-      <header class="header">
+      <header class="header" id="header">
         <div class="header-inner">
           <a href="/" class="logo"><img src="img/icons/logo.svg" alt="logo" /></a>
           <div class="burger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </div>
+        </div>
+      </header>
+      <header class="header" id="header-fix">
+        <div class="header-inner">
+          <a href="/" class="logo"><img src="img/icons/logo_black.svg" alt="logo" /></a>
+          <div class="burger burger-black">
             <span class="line"></span>
             <span class="line"></span>
             <span class="line"></span>
@@ -34,7 +44,7 @@
             <div class="fullscreen-content">
               <h2 class="main-title">современная <span>архитектура</span></h2>
               <a href="#" class="project-link">
-                <span class="project-title">Paradize house</span>
+                <span class="project-title-link">Paradize house</span>
                 <span class="more-details">Подробнее</span>
               </a>
             </div>
@@ -46,7 +56,7 @@
                 современный <span>дизайн интерьеров</span>
               </h2>
               <a href="#" class="project-link">
-                <span class="project-title">Paradize house</span>
+                <span class="project-title-link">Paradize house</span>
                 <span class="more-details">Подробнее</span>
               </a>
             </div>
@@ -56,15 +66,15 @@
             <div class="fullscreen-content">
               <h2 class="main-title">современная <span>архитектура</span></h2>
               <a href="#" class="project-link">
-                <span class="project-title">Paradize house</span>
+                <span class="project-title-link">Paradize house</span>
                 <span class="more-details">Подробнее</span>
               </a>
             </div>
           </div>
         </div>
       </div>
-      <a href="#" class="callback-button"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"
-          xmlns="http://www.w3.org/2000/svg">
+      <a href="#" class="callback-button" id="callback-button"><svg width="40" height="40" viewBox="0 0 40 40"
+          fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
             d="M19.5176 8.04756C19.5173 7.96541 19.5333 7.88403 19.5647 7.80809C19.596 7.73215 19.642 7.66315 19.7001 7.60506C19.7582 7.54698 19.8272 7.50095 19.9031 7.46963C19.9791 7.43831 20.0604 7.42231 20.1426 7.42256C26.8301 7.27881 32.7176 13.1726 32.5801 19.8538C32.5801 20.0196 32.5142 20.1785 32.397 20.2957C32.2798 20.413 32.1209 20.4788 31.9551 20.4788C31.7893 20.4788 31.6304 20.413 31.5132 20.2957C31.3959 20.1785 31.3301 20.0196 31.3301 19.8538C31.4551 13.8401 26.1551 8.54756 20.1426 8.67256C19.977 8.67206 19.8183 8.60606 19.7012 8.48895C19.5841 8.37185 19.5181 8.21317 19.5176 8.04756ZM36.8488 33.8476C36.1303 34.9209 35.1692 35.8101 34.0432 36.4431C32.9172 37.0762 31.6581 37.4352 30.3676 37.4913C27.9632 37.5957 25.5782 36.4994 23.4676 35.5226C19.2473 33.6952 15.4222 31.0652 12.2051 27.7788C8.964 24.6031 6.35903 20.8378 4.53009 16.6851C1.41134 10.7663 1.95509 5.97256 6.08009 3.22256C7.77384 1.99756 9.84884 2.35381 11.3551 4.14131C12.9909 6.0372 14.5103 8.03043 15.9051 10.1101C16.7801 12.0601 15.3926 13.4288 14.2801 14.5288C12.8676 15.9226 12.1863 16.7226 13.3676 18.1913C15.7862 21.55 18.7501 24.4801 22.1363 26.8601C23.7301 28.0876 25.1963 25.8319 26.5676 24.7038C26.9892 24.2381 27.5565 23.9295 28.1765 23.8284C28.7965 23.7273 29.4324 23.8399 29.9801 24.1476C32.342 25.8457 35.1782 27.6369 36.9113 29.8726C37.2852 30.4706 37.4783 31.164 37.4672 31.8693C37.4561 32.5745 37.2414 33.2615 36.8488 33.8476Z" />
           <path
@@ -519,6 +529,7 @@
           <a href="#" class="footer-link">Политика конфиденциальности</a>
         </div>
       </div>
+      <div class="go-top"><img src="/img/icons/toTop.png" alt="to top" /></div>
     </footer>
   </div>
   <script src="js/swiper.min.js"></script>
