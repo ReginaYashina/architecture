@@ -240,6 +240,11 @@ input:focus:-ms-input-placeholder {
   left: 0;
   padding: 50px 100px 0;
 }
+@media (max-width: 1300px) {
+  .header {
+    padding: 50px 50px 0;
+  }
+}
 
 .header-inner {
   display: flex;
@@ -289,6 +294,11 @@ input:focus:-ms-input-placeholder {
   display: block;
   font-size: 52px;
   margin-top: 15px;
+}
+@media (max-width: 1300px) {
+  .main-title span {
+    line-height: 125%;
+  }
 }
 
 .callback-button {
@@ -344,6 +354,12 @@ input:focus:-ms-input-placeholder {
   width: 1290px;
   margin: 0 auto;
 }
+@media (max-width: 1300px) {
+  .container {
+    width: 100%;
+    padding: 0 25px;
+  }
+}
 
 .about {
   padding: 100px 0 50px;
@@ -351,6 +367,11 @@ input:focus:-ms-input-placeholder {
 
 .about-row {
   display: flex;
+}
+@media (max-width: 1300px) {
+  .about-row {
+    flex-direction: column;
+  }
 }
 
 .about-column {
@@ -384,11 +405,21 @@ input:focus:-ms-input-placeholder {
   align-items: stretch;
   gap: 10px;
 }
+@media (max-width: 1300px) {
+  .projects-photos {
+    flex-direction: column;
+  }
+}
 
 .project-photo-block {
   display: block;
   position: relative;
   width: calc(50% - 5px);
+}
+@media (max-width: 1300px) {
+  .project-photo-block {
+    width: 100%;
+  }
 }
 .project-photo-block:hover > .project-photo-hover {
   opacity: 1;
@@ -462,6 +493,12 @@ input:focus:-ms-input-placeholder {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 30px;
+}
+@media (max-width: 1300px) {
+  .advantages-row {
+    flex-direction: column;
+    gap: 15px;
+  }
 }
 
 .advantages-block {
@@ -595,6 +632,11 @@ input:focus:-ms-input-placeholder {
   align-items: center;
   margin: 0 15px 30px;
 }
+@media (max-width: 1300px) {
+  .work-architecture-column {
+    flex: 1 1 46%;
+  }
+}
 
 .work-architecture-number {
   color: #afafaf;
@@ -636,12 +678,16 @@ input:focus:-ms-input-placeholder {
   flex-wrap: wrap;
   margin: 0 -15px;
 }
-
-.work-design-column {
+.work-design-row .work-design-column {
   flex: 0 1 31%;
   margin: 0 15px 30px;
   position: relative;
   padding: 70px 0 0 40px;
+}
+@media (max-width: 1300px) {
+  .work-design-row .work-design-column {
+    flex: 1 1 46%;
+  }
 }
 
 .work-design-number {
@@ -682,6 +728,11 @@ input:focus:-ms-input-placeholder {
   justify-content: space-between;
   margin-top: 40px;
 }
+@media (max-width: 1300px) {
+  .price-row {
+    flex-direction: column;
+  }
+}
 
 .price-column {
   position: relative;
@@ -689,6 +740,12 @@ input:focus:-ms-input-placeholder {
 
 .price-column-left {
   flex: 0 1 60%;
+}
+@media (max-width: 1300px) {
+  .price-column-left {
+    flex: 1 1 100%;
+    margin-bottom: 25px;
+  }
 }
 
 .price-text {
@@ -712,10 +769,22 @@ input:focus:-ms-input-placeholder {
   margin-top: 40px;
   display: flex;
 }
+@media (max-width: 1300px) {
+  .feedback-row {
+    flex-direction: column;
+  }
+}
 
 .feedback-column-left {
   flex: 0 1 50%;
   padding-right: 5px;
+}
+@media (max-width: 1300px) {
+  .feedback-column-left {
+    flex: 1 1 100%;
+    padding: 0;
+    margin-bottom: 25px;
+  }
 }
 
 .feedback-text {
@@ -727,6 +796,11 @@ input:focus:-ms-input-placeholder {
 
 .feedback-column-right {
   padding-left: 180px;
+}
+@media (max-width: 1300px) {
+  .feedback-column-right {
+    padding: 0;
+  }
 }
 
 .form {
@@ -862,6 +936,11 @@ input:focus:-ms-input-placeholder {
   right: 100px;
   cursor: pointer;
 }
+@media (max-width: 1300px) {
+  .burger-line {
+    right: 50px;
+  }
+}
 
 .overlay {
   display: none;
@@ -894,6 +973,11 @@ input:focus:-ms-input-placeholder {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+@media (max-width: 1300px) {
+  .menu {
+    padding: 140px 50px 30px;
+  }
 }
 .menu.is-active {
   right: 0;

@@ -261,6 +261,10 @@ input:focus:-ms-input-placeholder {
   top: 0;
   left: 0;
   padding: 50px 100px 0;
+
+  @media (max-width:1300px) {
+    padding: 50px 50px 0;
+  }
 }
 
 .header-inner {
@@ -310,6 +314,10 @@ input:focus:-ms-input-placeholder {
     display: block;
     font-size: 52px;
     margin-top: 15px;
+
+    @media (max-width:1300px) {
+      line-height: 125%;
+    }
   }
 }
 
@@ -369,6 +377,11 @@ input:focus:-ms-input-placeholder {
 .container {
   width: 1290px;
   margin: 0 auto;
+
+  @media (max-width:1300px) {
+    width: 100%;
+    padding: 0 25px;
+  }
 }
 
 .about {
@@ -377,6 +390,10 @@ input:focus:-ms-input-placeholder {
 
 .about-row {
   display: flex;
+
+  @media (max-width:1300px) {
+    flex-direction: column;
+  }
 }
 
 .about-column {
@@ -410,12 +427,20 @@ input:focus:-ms-input-placeholder {
   justify-content: space-between;
   align-items: stretch;
   gap: 10px;
+
+  @media (max-width:1300px) {
+    flex-direction: column;
+  }
 }
 
 .project-photo-block {
   display: block;
   position: relative;
   width: calc((100% / 2) - 5px);
+
+  @media (max-width:1300px) {
+    width: 100%;
+  }
 
   &:hover>.project-photo-hover {
     opacity: 1;
@@ -493,6 +518,11 @@ input:focus:-ms-input-placeholder {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 30px;
+
+  @media (max-width:1300px) {
+    flex-direction: column;
+    gap: 15px;
+  }
 }
 
 .advantages-block {
@@ -631,6 +661,10 @@ input:focus:-ms-input-placeholder {
   flex-direction: column;
   align-items: center;
   margin: 0 15px 30px;
+
+  @media (max-width:1300px) {
+    flex: 1 1 46%;
+  }
 }
 
 .work-architecture-number {
@@ -672,13 +706,18 @@ input:focus:-ms-input-placeholder {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -15px;
-}
 
-.work-design-column {
-  flex: 0 1 31%;
-  margin: 0 15px 30px;
-  position: relative;
-  padding: 70px 0 0 40px;
+
+  .work-design-column {
+    flex: 0 1 31%;
+    margin: 0 15px 30px;
+    position: relative;
+    padding: 70px 0 0 40px;
+
+    @media (max-width:1300px) {
+      flex: 1 1 46%;
+    }
+  }
 }
 
 .work-design-number {
@@ -719,6 +758,10 @@ input:focus:-ms-input-placeholder {
   display: flex;
   justify-content: space-between;
   margin-top: 40px;
+
+  @media (max-width:1300px) {
+    flex-direction: column;
+  }
 }
 
 .price-column {
@@ -727,6 +770,11 @@ input:focus:-ms-input-placeholder {
 
 .price-column-left {
   flex: 0 1 60%;
+
+  @media (max-width:1300px) {
+    flex: 1 1 100%;
+    margin-bottom: 25px;
+  }
 }
 
 .price-column-right {}
@@ -752,6 +800,10 @@ input:focus:-ms-input-placeholder {
 .feedback-row {
   margin-top: 40px;
   display: flex;
+
+  @media (max-width:1300px) {
+    flex-direction: column;
+  }
 }
 
 .feedback-column {}
@@ -759,6 +811,12 @@ input:focus:-ms-input-placeholder {
 .feedback-column-left {
   flex: 0 1 50%;
   padding-right: 5px;
+
+  @media (max-width:1300px) {
+    flex: 1 1 100%;
+    padding: 0;
+    margin-bottom: 25px;
+  }
 }
 
 .feedback-text {
@@ -771,6 +829,10 @@ input:focus:-ms-input-placeholder {
 
 .feedback-column-right {
   padding-left: 180px;
+
+  @media (max-width:1300px) {
+    padding: 0;
+  }
 }
 
 .form {
@@ -926,6 +988,10 @@ input:focus:-ms-input-placeholder {
   top: 72px;
   right: 100px;
   cursor: pointer;
+
+  @media (max-width:1300px) {
+    right: 50px;
+  }
 }
 
 .overlay {
@@ -962,6 +1028,10 @@ input:focus:-ms-input-placeholder {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media (max-width:1300px) {
+    padding: 140px 50px 30px;
+  }
 
   &.is-active {
     right: 0;
