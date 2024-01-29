@@ -241,6 +241,7 @@ input:focus:-ms-input-placeholder {
   &.sticky {
     display: block;
     position: fixed;
+    z-index: 10;
   }
 }
 
@@ -257,7 +258,6 @@ input:focus:-ms-input-placeholder {
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
   padding: 50px 100px 0;
 }
 
@@ -269,6 +269,8 @@ input:focus:-ms-input-placeholder {
 
 .logo {
   max-width: 140px;
+  position: relative;
+  z-index: 10;
 }
 
 .logo img {
@@ -413,7 +415,7 @@ input:focus:-ms-input-placeholder {
   position: relative;
   width: calc((100% / 2) - 5px);
 
-  &:hover > .project-photo-hover {
+  &:hover>.project-photo-hover {
     opacity: 1;
     transition: all 0.7s ease-in;
   }
@@ -432,11 +434,9 @@ input:focus:-ms-input-placeholder {
   height: 100%;
   top: 0;
   left: 0;
-  background: linear-gradient(
-    0deg,
-    rgba(17, 17, 17, 0.6) 0%,
-    rgba(17, 17, 17, 0.6) 100%
-  );
+  background: linear-gradient(0deg,
+      rgba(17, 17, 17, 0.6) 0%,
+      rgba(17, 17, 17, 0.6) 100%);
   padding: 70px 120px;
   opacity: 0;
   transition: all 0.7s ease-in;
@@ -506,8 +506,7 @@ input:focus:-ms-input-placeholder {
   margin-right: 20px;
 }
 
-.advantages-info {
-}
+.advantages-info {}
 
 .advantages-title {
   color: #111;
@@ -612,8 +611,7 @@ input:focus:-ms-input-placeholder {
   }
 }
 
-.work-tabs-body {
-}
+.work-tabs-body {}
 
 .work-tabs-block {
   margin-top: 40px;
@@ -729,8 +727,7 @@ input:focus:-ms-input-placeholder {
   flex: 0 1 60%;
 }
 
-.price-column-right {
-}
+.price-column-right {}
 
 .price-text {
   color: #cfcfcf;
@@ -755,8 +752,7 @@ input:focus:-ms-input-placeholder {
   display: flex;
 }
 
-.feedback-column {
-}
+.feedback-column {}
 
 .feedback-column-left {
   flex: 0 1 50%;
@@ -907,6 +903,7 @@ input:focus:-ms-input-placeholder {
   & .line {
     background-color: #333;
   }
+
   &.is-active {
     & .line {
       background-color: #fff;
@@ -916,18 +913,17 @@ input:focus:-ms-input-placeholder {
 
 .overlay {
   display: none;
-  position: absolute;
+  position: fixed;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(
-    rgb(12, 12, 12) 0%,
-    rgb(12, 12, 12) 6%,
-    rgba(12, 12, 12, 0) 100%
-  );
+  background: linear-gradient(rgb(12, 12, 12) 0%,
+      rgb(12, 12, 12) 6%,
+      rgba(12, 12, 12, 0) 100%);
   top: 0;
   left: 0;
   opacity: 0;
   transition: all 0.3s ease 0s;
+
   &.is-active {
     display: block;
     opacity: 1;
@@ -935,6 +931,7 @@ input:focus:-ms-input-placeholder {
     z-index: 15;
   }
 }
+
 .menu {
   position: fixed;
   top: 0;
@@ -944,22 +941,23 @@ input:focus:-ms-input-placeholder {
   background: #1b1b1b;
   transition: all 0.3s ease 0s;
   padding: 30px;
+
   &.is-active {
     right: 0;
     transition: all 0.3s ease 0s;
     z-index: 15;
   }
 }
-.nav {
-}
-.nav-list {
-}
-.nav-item {
-}
-.nav-link {
-}
-.nav-link-active {
-}
+
+.nav {}
+
+.nav-list {}
+
+.nav-item {}
+
+.nav-link {}
+
+.nav-link-active {}
 
 // swiper
 .fullscreen-slider-wrapper,
@@ -1073,6 +1071,7 @@ input:focus:-ms-input-placeholder {
 
 // project-page
 .project-breadcrumbs {
+
   a,
   p {
     color: #fff;
@@ -1086,16 +1085,13 @@ input:focus:-ms-input-placeholder {
   height: 100%;
   top: 0;
   left: 0;
-  background: linear-gradient(
-    0deg,
-    rgba(17, 17, 17, 0.4) 0%,
-    rgba(17, 17, 17, 0.4) 100%
-  );
+  background: linear-gradient(0deg,
+      rgba(17, 17, 17, 0.4) 0%,
+      rgba(17, 17, 17, 0.4) 100%);
   pointer-events: none;
 }
 
-.project-content {
-}
+.project-content {}
 
 .project-title {
   color: #fff;
@@ -1299,8 +1295,7 @@ input:focus:-ms-input-placeholder {
   margin-bottom: 10px;
 }
 
-.calculator-info {
-}
+.calculator-info {}
 
 .calculator-info-block {
   display: none;
@@ -1389,7 +1384,7 @@ input:focus:-ms-input-placeholder {
   appearance: none;
 }
 
-.calculator-input:checked + .calculator-label {
+.calculator-input:checked+.calculator-label {
   background: #818181;
 
   path {
@@ -1468,11 +1463,9 @@ input:focus:-ms-input-placeholder {
   margin-bottom: 25px;
 }
 
-.light-button {
-}
+.light-button {}
 
-.calculator-button {
-}
+.calculator-button {}
 
 // to top button
 .go-top {

@@ -181,25 +181,25 @@ infoButtons.forEach(function (item) {
 });
 
 // calculator
-
-// let checkboxes = document.querySelectorAll(".calculator-input");
-// checkboxes.forEach(function (item) {
-//   let checkedPrice = Number(
-//     item.closest(".calculator-block").querySelector(".calculator-cost span")
-//       .innerText
-//   );
-//   let finishPrice = 0;
-//   item.addEventListener("input", function () {
-//     for (let i = 0; i < checkboxes.length; i++) {
-//       if (checkboxes[i].checked) {
-//         finishPrice += checkedPrice;
-//       }
-//       document.querySelector(".calculator-finish-price").innerText =
-//         finishPrice;
-//       console.log(finishPrice);
-//     }
-//   });
-// });
+let checkboxes = document.querySelectorAll(".calculator-input");
+checkboxes.forEach(function (item) {
+  item.addEventListener("input", function () {
+    let finishPrice = 0;
+    let checkedPrice = Number(
+      item.closest(".calculator-block").querySelector(".calculator-cost span")
+        .innerText
+    );
+    for (let i = 0; i < checkboxes.length; i++) {
+      if (checkboxes[i].checked) {
+        finishPrice += checkedPrice;
+        // finishPrice += 1;
+      }
+      document.querySelector(".calculator-finish-price").innerText =
+        finishPrice;
+      console.log(finishPrice);
+    }
+  });
+});
 
 // to top button
 let body = document.body,
