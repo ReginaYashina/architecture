@@ -31,7 +31,6 @@ section {
 html,
 body {
   height: 100%;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -40,6 +39,9 @@ body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+}
+body._lock {
+  overflow: hidden;
 }
 
 input,
@@ -736,10 +738,11 @@ input:focus:-ms-input-placeholder {
   border-bottom: 1px solid rgba(17, 17, 17, 0.5);
 }
 
-.fotm-button {
+.form-button {
   margin-top: 25px;
   left: 0;
   transform: translateX(0);
+  background: transparent;
 }
 
 .footer {
@@ -809,7 +812,7 @@ input:focus:-ms-input-placeholder {
 
 .burger {
   position: relative;
-  z-index: 2;
+  z-index: 16;
 }
 
 .burger .line {
@@ -840,6 +843,43 @@ input:focus:-ms-input-placeholder {
 
 .burger-black .line {
   background-color: #333;
+}
+.burger-black.is-active .line {
+  background-color: #fff;
+}
+
+.overlay {
+  display: none;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgb(12, 12, 12) 0%, rgb(12, 12, 12) 6%, rgba(12, 12, 12, 0) 100%);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 0.3s ease 0s;
+}
+.overlay.is-active {
+  display: block;
+  opacity: 1;
+  transition: all 0.3s ease 0s;
+  z-index: 15;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: -655px;
+  width: 650px;
+  height: 100vh;
+  background: #1b1b1b;
+  transition: all 0.3s ease 0s;
+  padding: 30px;
+}
+.menu.is-active {
+  right: 0;
+  transition: all 0.3s ease 0s;
+  z-index: 15;
 }
 
 .fullscreen-slider-wrapper,
@@ -1019,6 +1059,7 @@ input:focus:-ms-input-placeholder {
 
 .about-project {
   padding: 100px 0;
+  scroll-behavior: smooth;
 }
 
 .about-project-row {
@@ -1312,7 +1353,7 @@ input:focus:-ms-input-placeholder {
   justify-content: center;
   align-items: center;
   display: none;
-  z-index: 15;
+  z-index: 14;
   opacity: 0.8;
   transition: all 0.3s ease-in;
 }

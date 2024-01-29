@@ -2,48 +2,69 @@
 const header = document.getElementById("header");
 const headerFix = document.getElementById("header-fix");
 const headerSimpleFix = document.getElementById("header-simple-fix");
-const fullscreen = document.querySelector('.fullscreen');
-const callbackButton = document.getElementById('callback-button');
+const fullscreen = document.querySelector(".fullscreen");
+const callbackButton = document.getElementById("callback-button");
 
 if (!!headerSimpleFix) {
   const headerSimpleFixHeight = headerSimpleFix.offsetHeight;
-  window.addEventListener('scroll', function () {
+  window.addEventListener("scroll", function () {
     let scrollDistance = window.scrollY;
     if (scrollDistance >= headerSimpleFixHeight) {
-      headerSimpleFix.classList.add('sticky');
-
+      headerSimpleFix.classList.add("sticky");
     } else {
-      headerSimpleFix.classList.remove('sticky');
-
+      headerSimpleFix.classList.remove("sticky");
     }
-  })
+  });
 }
 
 if (!!fullscreen) {
   const fullscreenHeight = fullscreen.offsetHeight;
-  window.addEventListener('scroll', function () {
+  window.addEventListener("scroll", function () {
     let scrollDistance = window.scrollY;
     if (scrollDistance >= fullscreenHeight) {
-      header.classList.add('sticky');
-      headerFix.classList.add('sticky')
-      callbackButton.classList.add('sticky')
+      header.classList.add("sticky");
+      headerFix.classList.add("sticky");
+      callbackButton.classList.add("sticky");
     } else {
-      header.classList.remove('sticky');
-      headerFix.classList.remove('sticky')
-      callbackButton.classList.remove('sticky')
+      header.classList.remove("sticky");
+      headerFix.classList.remove("sticky");
+      callbackButton.classList.remove("sticky");
     }
-  })
+  });
 }
-
 
 // burger
 let burgers = document.querySelectorAll(".burger");
+let overlay = document.querySelector("#overlay");
+let menu = document.querySelector("#menu");
+let menuLinks = document.querySelectorAll(".nav  a");
 burgers.forEach(function (burger) {
   burger.addEventListener("click", function () {
     burger.classList.toggle("is-active");
-  });
-})
+    document.querySelector("body").classList.toggle("_lock");
+    overlay.classList.toggle("is-active");
+    menu.classList.toggle("is-active");
 
+    if (overlay.classList.contains("is-active")) {
+      overlay.addEventListener("click", function () {
+        this.classList.remove("is-active");
+        document.querySelector("body").classList.remove("_lock");
+        burger.classList.remove("is-active");
+        menu.classList.remove("is-active");
+      });
+    }
+    if (burger.classList.contains("is-active")) {
+      menuLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
+          overlay.classList.remove("is-active");
+          document.querySelector("body").classList.remove("is-active");
+          burger.classList.remove("is-active");
+          menu.classList.remove("is-active");
+        });
+      });
+    }
+  });
+});
 
 // swiper
 new Swiper(".fullscreen-slider", {
@@ -111,7 +132,6 @@ if (!!btnShowCards) {
   btnShowCards.addEventListener("click", sliceArrayCards);
 }
 
-
 function sliceArrayCards() {
   if (shownCards >= cardsArray.length) return;
 
@@ -133,86 +153,101 @@ function sliceArrayCards() {
 }
 
 //gallery
-let gallery = document.querySelector('.about-project-gallery');
+let gallery = document.querySelector(".about-project-gallery");
 if (!!gallery) {
   baguetteBox.run(".about-project-gallery");
 }
 
-
 // calculator - page info
-let infoButtons = document.querySelectorAll('.calculator-info-btn');
+let infoButtons = document.querySelectorAll(".calculator-info-btn");
 infoButtons.forEach(function (item) {
-
-  item.addEventListener('click', function () {
+  item.addEventListener("click", function () {
     if (item.classList.contains("open")) {
       item.classList.remove("open");
-      item.innerText = 'Развернуть';
-      item.closest('.calculator-info').querySelector('.calculator-info-block').classList.remove("open");
+      item.innerText = "Развернуть";
+      item
+        .closest(".calculator-info")
+        .querySelector(".calculator-info-block")
+        .classList.remove("open");
     } else {
       item.classList.add("open");
-      item.innerText = 'Свернуть';
-      item.closest('.calculator-info').querySelector('.calculator-info-block').classList.add("open");
+      item.innerText = "Свернуть";
+      item
+        .closest(".calculator-info")
+        .querySelector(".calculator-info-block")
+        .classList.add("open");
     }
-  })
-})
+  });
+});
 
 // calculator
 
-// let checkboxes = document.querySelectorAll('.calculator-input');
+// let checkboxes = document.querySelectorAll(".calculator-input");
 // checkboxes.forEach(function (item) {
-//   let checkedPrice;
+//   let checkedPrice = Number(
+//     item.closest(".calculator-block").querySelector(".calculator-cost span")
+//       .innerText
+//   );
 //   let finishPrice = 0;
-//   item.addEventListener('input', function () {
-//     let checked = document.querySelectorAll('.calculator-input:checked');
-//     // console.log(checked);
-//     for (let i = 0; i < checked.length; i++) {
-//       checkedPrice = Number(checked[i].closest('.calculator-block').querySelector('.calculator-cost span').innerText);
-//       finishPrice += checkedPrice;
-//       document.querySelector('.calculator-finish-price').innerText = finishPrice;
-//       console.log(finishPrice);
-//     }
-//   })
-// })
-
-// let checkboxes = document.querySelectorAll('.calculator-input');
-// checkboxes.forEach(function (item) {
-//   let checkedPrice = Number(item.closest('.calculator-block').querySelector('.calculator-cost span').innerText);
-//   let finishPrice = 0;
-//   item.addEventListener('input', function () {
+//   item.addEventListener("input", function () {
 //     for (let i = 0; i < checkboxes.length; i++) {
 //       if (checkboxes[i].checked) {
-//         finishPrice += Number(checkboxes[i].closest('.calculator-block').querySelector('.calculator-cost span').innerText);
-//       } else {
-//         finishPrice = finishPrice - Number(checkboxes[i].closest('.calculator-block').querySelector('.calculator-cost span').innerText);
+//         finishPrice += checkedPrice;
 //       }
+//       document.querySelector(".calculator-finish-price").innerText =
+//         finishPrice;
 //       console.log(finishPrice);
 //     }
-
-//   })
-
-// })
+//   });
+// });
 
 // to top button
 let body = document.body,
   html = document.documentElement;
 
-let pageHeight = Math.max(body.scrollHeight, body.offsetHeight,
-  html.clientHeight, html.scrollHeight, html.offsetHeight);
+let pageHeight = Math.max(
+  body.scrollHeight,
+  body.offsetHeight,
+  html.clientHeight,
+  html.scrollHeight,
+  html.offsetHeight
+);
 
 console.log(pageHeight);
 
-let toTopButton = this.document.querySelector('.go-top');
-window.addEventListener('scroll', function () {
+let toTopButton = this.document.querySelector(".go-top");
+window.addEventListener("scroll", function () {
   if (window.scrollY > 400) {
-    toTopButton.classList.add('show');
+    toTopButton.classList.add("show");
   } else {
-    toTopButton.classList.remove('show');
+    toTopButton.classList.remove("show");
   }
-})
+});
 
-toTopButton.addEventListener('click', function backToTop() {
+toTopButton.addEventListener("click", function backToTop() {
   if (window.scrollY > 0) {
-    window.scrollBy(0, -pageHeight + 500);
-    // setTimeout(backToTop, 10);
+    window.scrollBy(0, -50);
+    setTimeout(backToTop, 10);
   }
-})
+});
+
+// smooth scroll
+document.querySelectorAll('a[href^="#"').forEach((link) => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    let href = this.getAttribute("href").substring(1);
+
+    const scrollTarget = document.getElementById(href);
+
+    // const topOffset = document.querySelector('.scrollto').offsetHeight;
+    const topOffset = 0; // если не нужен отступ сверху
+    const elementPosition = scrollTarget.getBoundingClientRect().top;
+    const offsetPosition = elementPosition - topOffset;
+
+    window.scrollBy({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
+  });
+});
