@@ -181,25 +181,34 @@ infoButtons.forEach(function (item) {
 });
 
 // calculator
-let checkboxes = document.querySelectorAll(".calculator-input");
+let checkboxes = document.querySelectorAll(".calculator-input-square");
+let area = document.querySelector('.calculator-area-input');
+let monthInput = document.querySelector('.calculator-input-month');
 checkboxes.forEach(function (item) {
-  item.addEventListener("input", function () {
-    let finishPrice = 0;
-    let checkedPrice = Number(
-      item.closest(".calculator-block").querySelector(".calculator-cost span")
+  item.addEventListener("input", calculator);
+});
+area.addEventListener("input", calculator);
+
+
+function calculator() {
+  let finishPrice = 0;
+  let checkedPrice;
+  let commonFinishPrice = 0;
+  let areaValue = document.querySelector('.calculator-area-input').value;
+  for (let i = 0; i < checkboxes.length; i++) {
+    checkedPrice = Number(
+      checkboxes[i].closest(".calculator-block").querySelector(".calculator-cost span")
         .innerText
     );
-    for (let i = 0; i < checkboxes.length; i++) {
-      if (checkboxes[i].checked) {
-        finishPrice += checkedPrice;
-        // finishPrice += 1;
-      }
-      document.querySelector(".calculator-finish-price").innerText =
-        finishPrice;
-      console.log(finishPrice);
+    if (checkboxes[i].checked) {
+      finishPrice += checkedPrice;
+      commonFinishPrice = finishPrice * areaValue;
     }
-  });
-});
+
+    document.querySelector(".calculator-finish-price span").innerText =
+      commonFinishPrice;
+  }
+}
 
 // to top button
 let body = document.body,
@@ -212,8 +221,6 @@ let pageHeight = Math.max(
   html.scrollHeight,
   html.offsetHeight
 );
-
-console.log(pageHeight);
 
 let toTopButton = this.document.querySelector(".go-top");
 window.addEventListener("scroll", function () {
