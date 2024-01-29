@@ -230,6 +230,7 @@ input:focus:-ms-input-placeholder {
   position: fixed;
   background: #fff;
   padding: 50px 100px;
+  z-index: 10;
 }
 
 .header {
@@ -850,6 +851,18 @@ input:focus:-ms-input-placeholder {
   background-color: #fff;
 }
 
+.burger-line {
+  width: 50px;
+  height: 6px;
+  background-color: #ecf0f1;
+  display: block;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  top: 72px;
+  right: 100px;
+  cursor: pointer;
+}
+
 .overlay {
   display: none;
   position: fixed;
@@ -876,12 +889,37 @@ input:focus:-ms-input-placeholder {
   height: 100vh;
   background: #1b1b1b;
   transition: all 0.3s ease 0s;
-  padding: 30px;
+  padding: 140px 100px 30px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .menu.is-active {
   right: 0;
   transition: all 0.3s ease 0s;
   z-index: 15;
+}
+.menu .socials {
+  justify-content: flex-end;
+}
+.menu .social-link {
+  margin: 0 0 0 15px;
+}
+.menu p:first-child {
+  padding-bottom: 5px;
+}
+
+.nav-item {
+  margin-bottom: 15px;
+}
+
+.nav-link {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 130%;
 }
 
 .fullscreen-slider-wrapper,

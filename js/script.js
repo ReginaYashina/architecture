@@ -38,6 +38,7 @@ let burgers = document.querySelectorAll(".burger");
 let overlay = document.querySelector("#overlay");
 let menu = document.querySelector("#menu");
 let menuLinks = document.querySelectorAll(".nav  a");
+let burgerLine = document.querySelector(".burger-line");
 burgers.forEach(function (burger) {
   burger.addEventListener("click", function () {
     burger.classList.toggle("is-active");
@@ -45,23 +46,31 @@ burgers.forEach(function (burger) {
     overlay.classList.toggle("is-active");
     menu.classList.toggle("is-active");
 
+
     if (overlay.classList.contains("is-active")) {
       overlay.addEventListener("click", function () {
         this.classList.remove("is-active");
         document.querySelector("body").classList.remove("_lock");
         burger.classList.remove("is-active");
         menu.classList.remove("is-active");
+
       });
     }
     if (burger.classList.contains("is-active")) {
       menuLinks.forEach(function (link) {
         link.addEventListener("click", function () {
           overlay.classList.remove("is-active");
-          document.querySelector("body").classList.remove("is-active");
+          document.querySelector("body").classList.remove("_lock");
           burger.classList.remove("is-active");
           menu.classList.remove("is-active");
         });
       });
+      burgerLine.addEventListener('click', function () {
+        overlay.classList.remove("is-active");
+        document.querySelector("body").classList.remove("_lock");
+        burger.classList.remove("is-active");
+        menu.classList.remove("is-active");
+      })
     }
   });
 });
@@ -184,11 +193,13 @@ infoButtons.forEach(function (item) {
 let checkboxes = document.querySelectorAll(".calculator-input-square");
 let area = document.querySelector('.calculator-area-input');
 let monthInput = document.querySelector('.calculator-input-month');
-checkboxes.forEach(function (item) {
-  item.addEventListener("input", calculator);
-});
-area.addEventListener("input", calculator);
 
+if (!!area) {
+  checkboxes.forEach(function (item) {
+    item.addEventListener("input", calculator);
+  });
+  area.addEventListener("input", calculator);
+}
 
 function calculator() {
   let finishPrice = 0;

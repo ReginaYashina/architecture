@@ -243,6 +243,7 @@ input:focus:-ms-input-placeholder {
     position: fixed;
     z-index: 10;
   }
+
 }
 
 #header-simple-fix {
@@ -250,6 +251,7 @@ input:focus:-ms-input-placeholder {
     position: fixed;
     background: #fff;
     padding: 50px 100px;
+    z-index: 10;
   }
 }
 
@@ -862,6 +864,7 @@ input:focus:-ms-input-placeholder {
 .burger {
   position: relative;
   z-index: 16;
+
 }
 
 .burger .line {
@@ -911,6 +914,20 @@ input:focus:-ms-input-placeholder {
   }
 }
 
+.burger-line {
+  width: 50px;
+  height: 6px;
+  background-color: #ecf0f1;
+  display: block;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  top: 72px;
+  right: 100px;
+  cursor: pointer;
+}
+
 .overlay {
   display: none;
   position: fixed;
@@ -940,12 +957,30 @@ input:focus:-ms-input-placeholder {
   height: 100vh;
   background: #1b1b1b;
   transition: all 0.3s ease 0s;
-  padding: 30px;
+  padding: 140px 100px 30px;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   &.is-active {
     right: 0;
     transition: all 0.3s ease 0s;
     z-index: 15;
+  }
+
+  & .socials {
+    justify-content: flex-end;
+  }
+
+  & .social-link {
+    margin: 0 0 0 15px;
+  }
+
+  p {
+    &:first-child {
+      padding-bottom: 5px;
+    }
   }
 }
 
@@ -953,9 +988,17 @@ input:focus:-ms-input-placeholder {
 
 .nav-list {}
 
-.nav-item {}
+.nav-item {
+  margin-bottom: 15px;
+}
 
-.nav-link {}
+.nav-link {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 130%;
+}
 
 .nav-link-active {}
 
