@@ -46,14 +46,12 @@ burgers.forEach(function (burger) {
     overlay.classList.toggle("is-active");
     menu.classList.toggle("is-active");
 
-
     if (overlay.classList.contains("is-active")) {
       overlay.addEventListener("click", function () {
         this.classList.remove("is-active");
         document.querySelector("body").classList.remove("_lock");
         burger.classList.remove("is-active");
         menu.classList.remove("is-active");
-
       });
     }
     if (burger.classList.contains("is-active")) {
@@ -65,12 +63,12 @@ burgers.forEach(function (burger) {
           menu.classList.remove("is-active");
         });
       });
-      burgerLine.addEventListener('click', function () {
+      burgerLine.addEventListener("click", function () {
         overlay.classList.remove("is-active");
         document.querySelector("body").classList.remove("_lock");
         burger.classList.remove("is-active");
         menu.classList.remove("is-active");
-      })
+      });
     }
   });
 });
@@ -162,10 +160,12 @@ function sliceArrayCards() {
 }
 
 //gallery
-let gallery = document.querySelector(".about-project-gallery");
-if (!!gallery) {
-  baguetteBox.run(".about-project-gallery");
-}
+document.addEventListener("DOMContentLoaded", () => {
+  let gallery = document.querySelector(".about-project-gallery");
+  if (!!gallery) {
+    baguetteBox.run(".about-project-gallery");
+  }
+});
 
 // calculator - page info
 let infoButtons = document.querySelectorAll(".calculator-info-btn");
@@ -191,8 +191,8 @@ infoButtons.forEach(function (item) {
 
 // calculator
 let checkboxes = document.querySelectorAll(".calculator-input-square");
-let area = document.querySelector('.calculator-area-input');
-let monthInput = document.querySelector('.calculator-input-month');
+let area = document.querySelector(".calculator-area-input");
+let monthInput = document.querySelector(".calculator-input-month");
 
 if (!!area) {
   checkboxes.forEach(function (item) {
@@ -205,11 +205,12 @@ function calculator() {
   let finishPrice = 0;
   let checkedPrice;
   let commonFinishPrice = 0;
-  let areaValue = document.querySelector('.calculator-area-input').value;
+  let areaValue = document.querySelector(".calculator-area-input").value;
   for (let i = 0; i < checkboxes.length; i++) {
     checkedPrice = Number(
-      checkboxes[i].closest(".calculator-block").querySelector(".calculator-cost span")
-        .innerText
+      checkboxes[i]
+        .closest(".calculator-block")
+        .querySelector(".calculator-cost span").innerText
     );
     if (checkboxes[i].checked) {
       finishPrice += checkedPrice;

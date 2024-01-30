@@ -1362,6 +1362,14 @@ input:focus:-ms-input-placeholder {
   left: 50%;
   transform: translateX(-50%);
   z-index: 11;
+  width: 100%;
+  padding: 0 5px;
+  @media (max-width: 1300px) {
+    top: 150px;
+  }
+  @media (max-width: 400px) {
+    flex-wrap: wrap;
+  }
 
   p,
   a {
@@ -1370,12 +1378,20 @@ input:focus:-ms-input-placeholder {
     font-size: 18px;
     font-weight: 400;
     line-height: 130%;
-    /* 23.4px */
+    @media (max-width: 550px) {
+      font-size: 14px;
+    }
+    @media (max-width: 400px) {
+      text-align: left;
+    }
   }
 }
 
 .divider {
   padding: 0 5px;
+  @media (max-width: 550px) {
+    padding: 0 3px;
+  }
 }
 
 // show more
@@ -1421,7 +1437,18 @@ input:focus:-ms-input-placeholder {
   z-index: 1;
   top: 150px;
   left: 50%;
+  width: 100%;
   transform: translateX(-50%);
+  @media (max-width: 1300px) {
+    top: 200px;
+  }
+  @media (max-width: 768px) {
+    font-size: 45px;
+  }
+  @media (max-width: 550px) {
+    top: 185px;
+    font-size: 40px;
+  }
 }
 
 .project-infoblock {
@@ -1434,6 +1461,14 @@ input:focus:-ms-input-placeholder {
   color: #fff;
   width: 1290px;
   justify-content: space-between;
+  @media (max-width: 1430px) {
+    width: 100%;
+    bottom: 140px;
+    // ???
+  }
+  @media (max-width: 400px) {
+    bottom: 120px;
+  }
 }
 
 .project-info {
@@ -1441,10 +1476,20 @@ input:focus:-ms-input-placeholder {
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (max-width: 1300px) {
+    width: 250px;
+  }
+  @media (max-width: 768px) {
+    width: 100px;
+    margin: 0 15px;
+  }
 }
 
 .project-info-icon {
   width: 40px;
+  @media (max-width: 1300px) {
+    width: 30px;
+  }
 }
 
 .project-info-title {
@@ -1455,6 +1500,13 @@ input:focus:-ms-input-placeholder {
   font-weight: 500;
   line-height: 130%;
   /* 28.6px */
+  @media (max-width: 1300px) {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 }
 
 .down-arrow {
@@ -1464,6 +1516,9 @@ input:focus:-ms-input-placeholder {
   right: 100px;
   bottom: 50px;
   cursor: pointer;
+  @media (max-width: 1300px) {
+    right: 50px;
+  }
 
   img {
     max-width: 100%;
@@ -1472,8 +1527,10 @@ input:focus:-ms-input-placeholder {
 
 .about-project {
   padding: 100px 0;
-
   scroll-behavior: smooth;
+  @media (max-width: 768px) {
+    padding: 50px 0;
+  }
 }
 
 .about-project-row {
@@ -1481,10 +1538,21 @@ input:focus:-ms-input-placeholder {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  @media (max-width: 768px) {
+    margin-bottom: 50px;
+    flex-direction: column;
+  }
 }
 
 .about-project-column {
   width: 50%;
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-bottom: 15px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .about-project-title {
