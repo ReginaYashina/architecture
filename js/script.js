@@ -270,4 +270,27 @@ document.querySelectorAll('a[href^="#"').forEach((link) => {
     });
   });
 });
+
 //Popups
+let modal = document.getElementById("popup");
+let btn = document.querySelectorAll(".popup-link");
+let span = document.querySelector(".popup-close");
+
+btn.forEach(function (item) {
+  item.addEventListener("click", function () {
+    modal.style.display = "block";
+    document.querySelector("body").classList.add("_lock");
+  });
+});
+
+span.onclick = function () {
+  modal.style.display = "none";
+  document.querySelector("body").classList.remove("_lock");
+};
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    document.querySelector("body").classList.remove("_lock");
+  }
+};
