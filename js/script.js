@@ -18,10 +18,12 @@ if (!!headerSimpleFix) {
 }
 
 if (!!fullscreen) {
-  const fullscreenHeight = fullscreen.offsetHeight;
+  // const fullscreenHeight = fullscreen.offsetHeight; //если после первого экрана должен появляться
+  const headerHeight = header.offsetHeight;
   window.addEventListener("scroll", function () {
     let scrollDistance = window.scrollY;
-    if (scrollDistance >= fullscreenHeight) {
+    // if (scrollDistance >= fullscreenHeight) //если после первого экрана должен появляться
+    if (scrollDistance >= headerHeight) {
       header.classList.add("sticky");
       headerFix.classList.add("sticky");
       callbackButton.classList.add("sticky");

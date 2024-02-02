@@ -266,18 +266,13 @@ input:focus:-ms-input-placeholder {
 #header-fix {
   display: none;
   background: #fff;
-  padding: 50px 100px;
-
-  @media (max-width: 1300px) {
-    padding: 50px;
-  }
-
-  @media (max-width: 768px) {
-    padding: 30px 50px;
-  }
+  padding: 25px 50px;
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(51, 51, 51, 0.2);
+  -moz-box-shadow: 0px 4px 4px 0px rgba(51, 51, 51, 0.2);
+  box-shadow: 0px 4px 4px 0px rgba(51, 51, 51, 0.2);
 
   @media (max-width: 600px) {
-    padding: 30px;
+    padding: 25px 30px;
   }
 
   &.sticky {
@@ -299,12 +294,15 @@ input:focus:-ms-input-placeholder {
   &.sticky {
     position: fixed;
     background: #fff;
-    padding: 50px 100px;
+    padding: 50px;
     z-index: 10;
+    -webkit-box-shadow: 0px 4px 4px 0px rgba(51, 51, 51, 0.2);
+    -moz-box-shadow: 0px 4px 4px 0px rgba(51, 51, 51, 0.2);
+    box-shadow: 0px 4px 4px 0px rgba(51, 51, 51, 0.2);
 
-    @media (max-width: 1300px) {
-      padding: 50px;
-    }
+    // @media (max-width: 1300px) {
+    //   padding: 50px;
+    // }
 
     @media (max-width: 768px) {
       padding: 30px 50px;
@@ -321,11 +319,7 @@ input:focus:-ms-input-placeholder {
   width: 100%;
   top: 0;
   left: 0;
-  padding: 50px 100px 0;
-
-  @media (max-width: 1300px) {
-    padding: 50px 50px 0;
-  }
+  padding: 50px 50px 0;
 
   @media (max-width: 600px) {
     padding: 40px 30px 0;
@@ -340,8 +334,6 @@ input:focus:-ms-input-placeholder {
 
 .logo {
   max-width: 140px;
-  position: relative;
-  z-index: 10;
 
   @media (max-width: 768px) {
     max-width: 100px;
@@ -350,6 +342,31 @@ input:focus:-ms-input-placeholder {
 
 .logo img {
   width: 100%;
+}
+
+.logo-wrapper {
+  display: flex;
+  position: relative;
+  z-index: 10;
+  align-items: center;
+
+}
+
+.description {
+  margin-left: 20px;
+
+  p {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 135%;
+    color: #fff;
+  }
+}
+
+.description-black {
+  p {
+    color: #333;
+  }
 }
 
 .fullscreen {
@@ -412,44 +429,56 @@ input:focus:-ms-input-placeholder {
 
 .callback-button {
   position: absolute;
-  left: 100px;
+  left: 50px;
   bottom: 50px;
   z-index: 2;
   cursor: pointer;
+  width: 55px;
+  height: 55px;
+  background: #434343;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  opacity: 0.8;
+  transition: all 0.3s ease-in;
 
-  @media (max-width: 1300px) {
-    left: 50px;
+  &:hover {
+    opacity: 1;
+    transition: all 0.3s ease-in;
   }
 
-  @media (max-width: 600px) {
-    left: 30px;
-  }
+  // @media (max-width: 1300px) {
+  //   left: 50px;
+  // }
+
+  // @media (max-width: 600px) {
+  //   left: 30px;
+  // }
 
   svg {
     fill: #fff;
+    width: 65%;
   }
 
   &.sticky {
     position: fixed;
-    top: 50%;
+    // top: 50%;
 
-    svg {
-      fill: #333;
-    }
+    // svg {
+    //   fill: #333;
+    // }
   }
 }
 
 .project-link {
   position: absolute;
-  right: 100px;
-  bottom: 50px;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: start;
-
-  @media (max-width: 1300px) {
-    right: 50px;
-  }
 }
 
 .project-title-link {
@@ -560,7 +589,7 @@ input:focus:-ms-input-placeholder {
     width: 100%;
   }
 
-  &:hover > .project-photo-hover {
+  &:hover>.project-photo-hover {
     opacity: 1;
     transition: all 0.7s ease-in;
   }
@@ -579,11 +608,9 @@ input:focus:-ms-input-placeholder {
   height: 100%;
   top: 0;
   left: 0;
-  background: linear-gradient(
-    0deg,
-    rgba(17, 17, 17, 0.6) 0%,
-    rgba(17, 17, 17, 0.6) 100%
-  );
+  background: linear-gradient(0deg,
+      rgba(17, 17, 17, 0.6) 0%,
+      rgba(17, 17, 17, 0.6) 100%);
   padding: 70px 120px;
   opacity: 0;
   transition: all 0.7s ease-in;
@@ -837,8 +864,7 @@ input:focus:-ms-input-placeholder {
   }
 }
 
-.work-tabs-body {
-}
+.work-tabs-body {}
 
 .work-tabs-block {
   margin-top: 40px;
@@ -985,8 +1011,7 @@ input:focus:-ms-input-placeholder {
   }
 }
 
-.price-column-right {
-}
+.price-column-right {}
 
 .price-text {
   color: #cfcfcf;
@@ -1025,8 +1050,7 @@ input:focus:-ms-input-placeholder {
   }
 }
 
-.feedback-column {
-}
+.feedback-column {}
 
 .feedback-column-left {
   flex: 0 1 50%;
@@ -1125,6 +1149,12 @@ input:focus:-ms-input-placeholder {
   /* 29.7px */
   text-decoration: none;
   margin-bottom: 10px;
+  transition: all .3s ease;
+
+  &:hover {
+    color: #626161;
+    transition: all .3s ease;
+  }
 
   &:last-child {
     margin-bottom: 0;
@@ -1141,6 +1171,18 @@ input:focus:-ms-input-placeholder {
 .social-link {
   max-width: 36px;
   margin: 0 7.5px;
+
+  &:hover {
+    svg {
+      fill: #626161;
+      transition: all .3s ease;
+    }
+  }
+
+  svg {
+    fill: #fff;
+    transition: all .3s ease;
+  }
 }
 
 .footer-link {
@@ -1151,18 +1193,32 @@ input:focus:-ms-input-placeholder {
   /* 18.9px */
   text-decoration-line: underline;
   text-align: center;
+  transition: all 0.3s ease-in;
+
+  &:hover {
+    transition: all 0.3s ease-in;
+    text-decoration: none;
+  }
 }
 
 // --------------------------------
 // burger
 .burger {
   position: relative;
-  z-index: 16;
+  z-index: 10;
+  // width: 55px;
+  // height: 55px;
+  // border-radius: 100%;
+  // background: #434343;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
 }
 
 .burger .line {
-  width: 50px;
-  height: 6px;
+  width: 40px;
+  height: 3px;
   background-color: #ecf0f1;
   display: block;
   // margin: 8px auto;
@@ -1170,14 +1226,10 @@ input:focus:-ms-input-placeholder {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 
-  @media (max-width: 768px) {
-    width: 45px;
-    height: 4px;
-  }
 }
 
 .burger .line:nth-child(2) {
-  margin: 11px auto;
+  margin: 9px auto;
 
   @media (max-width: 768px) {
     margin: 9px auto;
@@ -1217,8 +1269,8 @@ input:focus:-ms-input-placeholder {
 }
 
 .burger-line {
-  width: 50px;
-  height: 6px;
+  width: 40px;
+  height: 3px;
   background-color: #ecf0f1;
   display: block;
   -webkit-transition: all 0.3s ease-in-out;
@@ -1250,11 +1302,9 @@ input:focus:-ms-input-placeholder {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(
-    rgb(12, 12, 12) 0%,
-    rgb(12, 12, 12) 6%,
-    rgba(12, 12, 12, 0) 100%
-  );
+  background: linear-gradient(rgb(12, 12, 12) 0%,
+      rgb(12, 12, 12) 6%,
+      rgba(12, 12, 12, 0) 100%);
   top: 0;
   left: 0;
   opacity: 0;
@@ -1313,11 +1363,9 @@ input:focus:-ms-input-placeholder {
   }
 }
 
-.nav {
-}
+.nav {}
 
-.nav-list {
-}
+.nav-list {}
 
 .nav-item {
   margin-bottom: 15px;
@@ -1329,10 +1377,15 @@ input:focus:-ms-input-placeholder {
   font-size: 25px;
   font-weight: 700;
   line-height: 130%;
+  transition: all .3s ease;
+
+  &:hover {
+    color: #626161;
+    transition: all .3s ease;
+  }
 }
 
-.nav-link-active {
-}
+.nav-link-active {}
 
 // swiper
 .fullscreen-slider-wrapper,
@@ -1481,6 +1534,7 @@ input:focus:-ms-input-placeholder {
 
 // project-page
 .project-breadcrumbs {
+
   a,
   p {
     color: #fff;
@@ -1494,16 +1548,13 @@ input:focus:-ms-input-placeholder {
   height: 100%;
   top: 0;
   left: 0;
-  background: linear-gradient(
-    0deg,
-    rgba(17, 17, 17, 0.4) 0%,
-    rgba(17, 17, 17, 0.4) 100%
-  );
+  background: linear-gradient(0deg,
+      rgba(17, 17, 17, 0.4) 0%,
+      rgba(17, 17, 17, 0.4) 100%);
   pointer-events: none;
 }
 
-.project-content {
-}
+.project-content {}
 
 .project-title {
   color: #fff;
@@ -1602,17 +1653,19 @@ input:focus:-ms-input-placeholder {
 .down-arrow {
   position: absolute;
   z-index: 1;
-  width: 40px;
-  right: 100px;
+  width: 55px;
+  height: 55px;
+  border-radius: 100%;
+  right: 50px;
   bottom: 50px;
   cursor: pointer;
-
-  @media (max-width: 1300px) {
-    right: 50px;
-  }
+  background: #434343;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   img {
-    max-width: 100%;
+    max-width: 65%;
   }
 }
 
@@ -1824,8 +1877,7 @@ input:focus:-ms-input-placeholder {
   margin-bottom: 10px;
 }
 
-.calculator-info {
-}
+.calculator-info {}
 
 .calculator-info-block {
   display: none;
@@ -1923,7 +1975,7 @@ input:focus:-ms-input-placeholder {
   appearance: none;
 }
 
-.calculator-input:checked + .calculator-label {
+.calculator-input:checked+.calculator-label {
   background: #818181;
 
   path {
@@ -2010,18 +2062,17 @@ input:focus:-ms-input-placeholder {
   margin-bottom: 25px;
 }
 
-.calculator-button {
-}
+.calculator-button {}
 
 // to top button
 .go-top {
   cursor: pointer;
   position: fixed;
-  right: 100px;
-  bottom: 100px;
-  width: 60px;
-  height: 60px;
-  background: #fff;
+  right: 50px;
+  bottom: 50px;
+  width: 55px;
+  height: 55px;
+  background: #434343;
   border-radius: 100%;
   justify-content: center;
   align-items: center;
@@ -2030,25 +2081,25 @@ input:focus:-ms-input-placeholder {
   opacity: 0.8;
   transition: all 0.3s ease-in;
 
-  @media (max-width: 1300px) {
-    right: 50px;
-    bottom: 50px;
-  }
+  // @media (max-width: 1300px) {
+  //   right: 50px;
+  //   bottom: 50px;
+  // }
 
-  @media (max-width: 768px) {
-    width: 55px;
-    height: 55px;
-  }
+  // @media (max-width: 768px) {
+  //   width: 55px;
+  //   height: 55px;
+  // }
 
-  @media (max-width: 600px) {
-    right: 30px;
-    bottom: 30px;
-  }
+  // @media (max-width: 600px) {
+  //   right: 30px;
+  //   bottom: 30px;
+  // }
 
-  @media (max-width: 450px) {
-    width: 50px;
-    height: 50px;
-  }
+  // @media (max-width: 450px) {
+  //   width: 50px;
+  //   height: 50px;
+  // }
 
   &:hover {
     opacity: 1;
@@ -2061,9 +2112,7 @@ input:focus:-ms-input-placeholder {
   }
 
   img {
-    @media (max-width: 768px) {
-      max-width: 60%;
-    }
+    max-width: 65%;
   }
 }
 
@@ -2088,65 +2137,82 @@ input:focus:-ms-input-placeholder {
   width: 434px;
   z-index: 99999;
   position: relative;
+
   @media (max-width: 450px) {
     padding: 50px 30px 30px;
     width: 95%;
   }
 }
-.popup-body {
-}
+
+.popup-body {}
+
 .popup-inner {
   width: 100%;
+
   & .form {
     width: 100%;
   }
+
   & .form-button {
     padding: 25px;
+
     @media (max-width: 450px) {
       font-size: 12px;
       padding: 20px 5px;
     }
+
     span {
       @media (max-width: 450px) {
         margin-right: 40px;
       }
     }
   }
+
   & .light-button:before {
     right: 35px;
   }
 }
+
 .popup-close {
   position: absolute;
   top: 20px;
   right: 20px;
   cursor: pointer;
 }
+
 .popup-title {
   color: #111;
   font-size: 24px;
   font-weight: 600;
-  line-height: 130%; /* 31.2px */
+  line-height: 130%;
+  /* 31.2px */
   margin-bottom: 10px;
+
   @media (max-width: 450px) {
     font-size: 20px;
   }
 }
+
 .popup-subtitle {
   color: #333;
   font-size: 16px;
   font-weight: 400;
-  line-height: 130%; /* 20.8px */
+  line-height: 130%;
+
+  /* 20.8px */
   @media (max-width: 450px) {
     font-size: 14px;
   }
 }
+
 .popup-info {
   margin-top: 10px;
   color: #333;
   font-size: 14px;
   font-weight: 400;
-  line-height: 130%; /* 18.2px */
+  line-height: 130%;
+
+  /* 18.2px */
   @media (max-width: 450px) {
     font-size: 12px;
   }
