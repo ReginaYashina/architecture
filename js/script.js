@@ -1,9 +1,10 @@
-// header & fixed button
+// header & fixed button & fixed breadcrumbs
 const header = document.getElementById("header");
 const headerFix = document.getElementById("header-fix");
 const headerSimpleFix = document.getElementById("header-simple-fix");
 const fullscreen = document.querySelector(".fullscreen");
 const callbackButton = document.getElementById("callback-button");
+const breadcrumbs = document.querySelector('.breadcrumbs');
 
 if (!!headerSimpleFix) {
   const headerSimpleFixHeight = headerSimpleFix.offsetHeight;
@@ -11,8 +12,10 @@ if (!!headerSimpleFix) {
     let scrollDistance = window.scrollY;
     if (scrollDistance >= headerSimpleFixHeight) {
       headerSimpleFix.classList.add("sticky");
+      breadcrumbs.classList.add("sticky");
     } else {
       headerSimpleFix.classList.remove("sticky");
+      breadcrumbs.classList.remove("sticky");
     }
   });
 }
@@ -27,10 +30,12 @@ if (!!fullscreen) {
       header.classList.add("sticky");
       headerFix.classList.add("sticky");
       callbackButton.classList.add("sticky");
+      breadcrumbs.classList.add("sticky");
     } else {
       header.classList.remove("sticky");
       headerFix.classList.remove("sticky");
       callbackButton.classList.remove("sticky");
+      breadcrumbs.classList.remove("sticky");
     }
   });
 }
