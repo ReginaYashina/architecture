@@ -261,9 +261,9 @@ input:focus:-ms-input-placeholder {
   padding: 25px 50px;
   box-shadow: 0px 4px 4px 0px rgba(51, 51, 51, 0.2);
 }
-@media (max-width: 600px) {
+@media (max-width: 1300px) {
   #header-fix {
-    padding: 25px 30px;
+    padding: 25px;
   }
 }
 #header-fix.sticky {
@@ -274,12 +274,7 @@ input:focus:-ms-input-placeholder {
 
 @media (max-width: 1300px) {
   #header-simple-fix {
-    padding: 50px 50px 0;
-  }
-}
-@media (max-width: 600px) {
-  #header-simple-fix {
-    padding: 40px 30px 0;
+    padding: 25px 25px 0;
   }
 }
 #header-simple-fix.sticky {
@@ -289,14 +284,9 @@ input:focus:-ms-input-placeholder {
   z-index: 10;
   box-shadow: 0px 4px 4px 0px rgba(51, 51, 51, 0.2);
 }
-@media (max-width: 768px) {
+@media (max-width: 1300px) {
   #header-simple-fix.sticky {
-    padding: 30px 50px;
-  }
-}
-@media (max-width: 600px) {
-  #header-simple-fix.sticky {
-    padding: 30px;
+    padding: 25px;
   }
 }
 
@@ -307,9 +297,9 @@ input:focus:-ms-input-placeholder {
   left: 0;
   padding: 50px 50px 0;
 }
-@media (max-width: 600px) {
+@media (max-width: 1300px) {
   .header {
-    padding: 40px 30px 0;
+    padding: 25px 25px 0;
   }
 }
 
@@ -341,6 +331,11 @@ input:focus:-ms-input-placeholder {
 
 .description {
   margin-left: 20px;
+}
+@media (max-width: 1300px) {
+  .description {
+    display: none;
+  }
 }
 .description p {
   font-weight: 400;
@@ -436,6 +431,18 @@ input:focus:-ms-input-placeholder {
   .callback-button:hover {
     opacity: 1;
     transition: all 0.3s ease-in;
+  }
+}
+@media (max-width: 1300px) {
+  .callback-button {
+    left: 25px;
+    bottom: 25px;
+  }
+}
+@media (max-width: 768px) {
+  .callback-button {
+    width: 45px;
+    height: 45px;
   }
 }
 .callback-button svg {
@@ -1484,11 +1491,12 @@ input:focus:-ms-input-placeholder {
 }
 @media (max-width: 1300px) {
   .breadcrumbs {
-    top: 150px;
+    top: 45px;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 768px) {
   .breadcrumbs {
+    top: 35px;
     flex-wrap: wrap;
   }
 }
@@ -1499,6 +1507,12 @@ input:focus:-ms-input-placeholder {
   font-size: 18px;
   font-weight: 400;
   line-height: 130%;
+}
+@media (max-width: 768px) {
+  .breadcrumbs p,
+  .breadcrumbs a {
+    font-size: 16px;
+  }
 }
 .breadcrumbs a {
   transition: all 0.3s ease;
@@ -1666,6 +1680,18 @@ input:focus:-ms-input-placeholder {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 1300px) {
+  .down-arrow {
+    right: 25px;
+    bottom: 25px;
+  }
+}
+@media (max-width: 768px) {
+  .down-arrow {
+    width: 45px;
+    height: 45px;
+  }
+}
 .down-arrow img {
   max-width: 65%;
 }
@@ -1797,6 +1823,40 @@ input:focus:-ms-input-placeholder {
 
 .calculator {
   margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  position: relative;
+}
+@media (max-width: 1024px) {
+  .calculator {
+    flex-direction: column;
+  }
+}
+
+.calculator-column {
+  width: 49%;
+}
+@media (max-width: 1024px) {
+  .calculator-column {
+    width: 100%;
+  }
+}
+
+.calculator-column-sticky {
+  position: sticky;
+  top: 100px;
+}
+@media (max-width: 1024px) {
+  .calculator-column-sticky {
+    position: relative;
+    top: 0;
+    margin-top: 20px;
+  }
+}
+
+.calculator-title {
+  font-size: 25px;
 }
 
 .calculator-main-title {
@@ -2064,6 +2124,18 @@ input:focus:-ms-input-placeholder {
   z-index: 14;
   opacity: 0.8;
   transition: all 0.3s ease-in;
+}
+@media (max-width: 1300px) {
+  .go-top {
+    right: 25px;
+    bottom: 25px;
+  }
+}
+@media (max-width: 768px) {
+  .go-top {
+    width: 45px;
+    height: 45px;
+  }
 }
 @media (hover: hover) {
   .go-top:hover {
