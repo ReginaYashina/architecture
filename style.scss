@@ -337,10 +337,10 @@ input:focus:-ms-input-placeholder {
 }
 
 .logo {
-  max-width: 140px;
+  max-width: 50px;
 
   @media (max-width: 768px) {
-    max-width: 100px;
+    max-width: 35px;
   }
 }
 
@@ -357,7 +357,7 @@ input:focus:-ms-input-placeholder {
 }
 
 .description {
-  margin-left: 20px;
+  margin-left: 15px;
 
   @media (max-width:1300px) {
     display: none;
@@ -511,7 +511,7 @@ input:focus:-ms-input-placeholder {
 
   @media (max-width:500px) {
     top: 80px;
-    left: 25px;
+    left: 15px;
     transform: translateX(0);
   }
 }
@@ -1188,10 +1188,10 @@ input:focus:-ms-input-placeholder {
 }
 
 .footer-logo {
-  max-width: 140px;
+  max-width: 80px;
 
   @media (max-width: 768px) {
-    max-width: 120px;
+    max-width: 60px;
   }
 
   img {
@@ -1903,7 +1903,7 @@ input:focus:-ms-input-placeholder {
   z-index: 1;
   top: 10px;
   left: 10px;
-  max-width: 98px;
+  max-width: 35px;
 }
 
 // calculator-page
